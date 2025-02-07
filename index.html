@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Logo -->
+  <div class="logo-container">
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="Logo" class="logo-image" />
+    </div>
+  </div>
+
+  <!-- Navigation Menu -->
+  <nav class="nav">
+    <div class="nav-items">
+      <!-- works, contact, us -->
+      <a href="#" class="nav-item" data-section="works" style="top: 0px;">works</a>
+      <a href="#" class="nav-item" data-section="contact" style="top: 60px;">contact</a>
+      <a href="#" class="nav-item" data-section="us" style="top: 120px;">us</a>
+    </div>
+    <!-- Contact Dropdown -->
+    <div class="contact-dropdown">
+      <div class="contact-icons">
+        <a href="https://www.instagram.com/vericreativelab" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.behance.net" target="_blank"><i class="fab fa-behance"></i></a>
+        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <canvas id="canvas"></canvas>
+
+  <!-- Showreel Modal -->
+  <div id="showreel-modal" class="showreel-modal">
+    <div class="showreel-wrapper">
+      <video id="showreel-video" controls autoplay>
+        <source src="assets/videos/showreel.mp4" type="video/mp4" />
+        Tarayıcınız video etiketini desteklemiyor.
+      </video>
+      <div class="showreel-title">AI Showreel</div>
+      <button class="close-modal">X</button>
+    </div>
+  </div>
+
+  <!-- Manifesto Overlay -->
+  <div id="manifesto-overlay" class="manifesto-overlay">
+    <div class="manifesto-content">
+      <p>
+        <span class="underline">At Veri Creative Lab</span><br />
+        We bring every idea to life using cost-effective AI tools and test them with digital marketing platforms.
+      </p>
+      <p>
+        <span class="underline">We hate creative bureaucracy</span><br />
+        Instead of building a single concept and letting endless comments kill its spirit, we run small-scale tests with real audiences—integrating the research phase into our creative process.
+      </p>
+      <p>
+        <span class="underline">Iteration is at the heart of what we do</span><br />
+        Because, frankly, neither you nor we know which idea will truly resonate.
+      </p>
+      <p>
+        That’s how we create amazing AI-driven films and campaigns that yield real profit.<br />
+        That's what we are.
+      </p>
+    </div>
+    <div class="back-arrow">
+      <i class="fas fa-arrow-left"></i>
+    </div>
+  </div>
+
+  <!-- GSAP Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>

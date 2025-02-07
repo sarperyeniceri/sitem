@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #000;
+  font-family: 'Montserrat', sans-serif;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Logo Container: 240x240, tam ortada */
+.logo-container {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 240px;
+  height: 240px;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.logo-container:hover .logo-image {
+  transform: scale(1.1);
+}
+
+/* Navigation Menu */
+.nav {
+  position: fixed;
+  left: 50%;
+  top: 47%;
+  transform: translate(-50%, -50%);
+  z-index: 15;
+  text-align: center;
+  width: 300px;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.nav.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  display: block;
+}
+
+/* Nav Items Container */
+.nav-items {
+  position: relative;
+  width: 100%;
+  height: 120px;
+}
+
+/* Navigation Item Styling */
+.nav-item {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 24px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 300;
+  padding: 10px 0;
+  text-decoration: none;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: top, opacity, transform;
+  -webkit-font-smoothing: antialiased;
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  transform: scaleX(0);
+  width: 100%;
+  height: 0.5px;
+  background: rgba(255, 255, 255, 0.7);
+  bottom: 0;
+  transition: transform 0.4s, opacity 0.4s;
+  opacity: 0;
+}
+
+.nav-item:hover::before {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.nav-item:hover {
+  color: white;
+  animation: letterSpacing 0.3s ease infinite;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes letterSpacing {
+  0%, 100% { letter-spacing: 5px; }
+  50% { letter-spacing: 5.5px; }
+}
+
+/* Showreel Modal */
+.showreel-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.showreel-wrapper {
+  position: relative;
+  width: 80vw;
+  max-width: 1200px;
+}
+
+#showreel-video {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ffffff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.showreel-title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: normal;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Contact Dropdown */
+.contact-dropdown {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 200px;
+  display: none;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+}
+
+.contact-icons a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.contact-icons a:hover {
+  color: white;
+}
+
+/* Manifesto Overlay */
+.manifesto-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 25;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .manifesto-content {
+    font-size: 16px;
+    font-weight: 300; /* İnce font */
+    color: #fff;
+    line-height: 1.5;
+    max-width: 800px;
+  }
+  
+  .manifesto-content p {
+    margin-bottom: 20px;
+  }
+  
+  .underline {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+  }
+  
+  /* Back Arrow – Metnin hemen sonunda, akışta yer alacak */
+  .back-arrow {
+    margin-top: 20px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+    /* Absolute positioning kaldırıldı */
+  }
+  
