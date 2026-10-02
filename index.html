@@ -6,14 +6,18 @@
 <title>Veri Creative Lab | Markanız Yapay Zekada Önerilsin</title>
 <meta name="description" content="ChatGPT, Gemini ve benzeri yapay zekalarla konuşan insanlara markanızın önerilmesi için çalışıyoruz. Yapay zeka reklamcılığı ve görünürlük. Ücretsiz görünürlük testi.">
 <script>
-// Dil: ilk gelişte tarayıcı dili Türkçe değilse İngilizce sayfaya geç (reklam parametreleri korunur)
+// Dil: ilk gelişte ziyaretçi Türkiye dışındaysa ve tarayıcısında Türkçe yoksa İngilizce sayfaya geç (reklam parametreleri korunur)
 (function () {
   try {
     var p = location.pathname;
     if (p !== "/" && p !== "/index.html") return;
     var s = localStorage.getItem("vcl_dil");
     var bot = /bot|crawl|spider|slurp|preview|facebookexternalhit|whatsapp|gpt|claude|perplexity|lighthouse/i.test(navigator.userAgent);
-    var tr = /^tr/i.test(navigator.language || "tr");
+    // Türkçe say: tarayıcı dillerinden biri Türkçeyse ya da saat dilimi Türkiye ise (cihazı İngilizce kullanan çok)
+    var diller = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "tr"]).join(",");
+    var tz = "";
+    try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) {}
+    var tr = /(^|,)tr/i.test(diller) || tz === "Europe/Istanbul";
     if (s === "en" || (!s && !tr && !bot)) location.replace("/en/" + location.search + location.hash);
   } catch (e) {}
 })();
