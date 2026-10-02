@@ -11,3 +11,7 @@
 ## İletişim
 - Web: https://www.vericreativelab.co
 - E-posta: sarperyeniceri@gmail.com
+
+## English
+- English version of the site: https://www.vericreativelab.co/en/
+- Veri Creative Lab is an AI advertising team that works to get brands and businesses recommended by AI assistants such as ChatGPT, Gemini, Claude and Perplexity. Based in Türkiye, also consulting internationally.
