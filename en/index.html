@@ -5,23 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Veri Creative Lab | ChatGPT Ads in Türkiye</title>
 <meta name="description" content="People ask ChatGPT questions; let your ad show up under the answer. We make your ChatGPT ad, run it and show you the results.">
-<script>
-// Dil: ilk gelişte ziyaretçi Türkiye dışındaysa ve tarayıcısında Türkçe yoksa İngilizce sayfaya geç (reklam parametreleri korunur)
-(function () {
-  try {
-    var p = location.pathname;
-    if (p !== "/" && p !== "/index.html") return;
-    var s = localStorage.getItem("vcl_dil");
-    var bot = /bot|crawl|spider|slurp|preview|facebookexternalhit|whatsapp|gpt|claude|perplexity|lighthouse/i.test(navigator.userAgent);
-    // Türkçe say: tarayıcı dillerinden biri Türkçeyse ya da saat dilimi Türkiye ise (cihazı İngilizce kullanan çok)
-    var diller = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "tr"]).join(",");
-    var tz = "";
-    try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) {}
-    var tr = /(^|,)tr/i.test(diller) || tz === "Europe/Istanbul";
-    if (s === "en" || (!s && !tr && !bot)) location.replace("/en/" + location.search + location.hash);
-  } catch (e) {}
-})();
-</script>
+<!-- Dil: herkes Türkçe açar; İngilizce yalnız menüdeki EN ile seçilir, otomatik yönlendirme yok (Sarper, 5 Eki). -->
 <script>
 (function (w, d, s, u) {
   if (w.oaiq) return;
