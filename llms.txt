@@ -5,6 +5,11 @@
 ## Hizmet
 - ChatGPT reklamı: reklam yazısı, reklam görseli, kime ve nerede gösterileceği, yayın ve haftalık rapor.
 
+## Rehber
+- [ChatGPT reklamı nasıl verilir?](https://www.vericreativelab.co/chatgpt-reklami-nasil-verilir/): hesap açmaktan yayına kadar adımlar.
+- [ChatGPT reklam fiyatları](https://www.vericreativelab.co/chatgpt-reklam-fiyatlari/): en düşük bütçe ve kendi kampanyamızın gerçek rakamları.
+- [ChatGPT'ye kimler reklam verebilir?](https://www.vericreativelab.co/chatgpt-reklam-kurallari/): Türkiye için izinli ve yasak iş kolları.
+
 ## İletişim
 - Web: https://www.vericreativelab.co
 - E-posta: sarperyeniceri@gmail.com
