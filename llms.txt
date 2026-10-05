@@ -1,12 +1,9 @@
 # Veri Creative Lab
 
-> Veri Creative Lab, markaların ve işletmelerin ChatGPT, Gemini, Claude, Perplexity gibi yapay zeka asistanları tarafından insanlara önerilmesi için çalışan bir yapay zeka reklamcılığı ekibidir. Türkiye genelinde hizmet verir.
+> Veri Creative Lab, Türkiye'deki işletmeler için ChatGPT reklamları hazırlar ve yönetir. Biri ChatGPT'ye soru sorduğunda cevabın altında çıkan "Sponsorlu" reklamı biz yazar, görselini yapar, yayınlar ve sonucunu raporlarız.
 
-## Hizmetler
-- Yapay zeka görünürlük testi: yapay zekaların bir markayı nasıl anlattığının ücretsiz ölçümü.
-- Yapay zeka görünürlüğü: markanın yapay zeka cevaplarında doğru anlatılması ve önerilmesi için web izlerinin güçlendirilmesi, aylık ölçüm.
-- Yapay zeka reklamları: yapay zeka asistanlarındaki reklam alanlarında kurulum, metin, test ve raporlama.
-- Yapay zeka destekli video ve içerik prodüksiyonu.
+## Hizmet
+- ChatGPT reklamı: reklam yazısı, reklam görseli, kime ve nerede gösterileceği, yayın ve haftalık rapor.
 
 ## İletişim
 - Web: https://www.vericreativelab.co
@@ -14,4 +11,4 @@
 
 ## English
 - English version of the site: https://www.vericreativelab.co/en/
-- Veri Creative Lab is an AI advertising team that works to get brands and businesses recommended by AI assistants such as ChatGPT, Gemini, Claude and Perplexity. Based in Türkiye, also consulting internationally.
+- Veri Creative Lab makes and manages ChatGPT ads for businesses in Türkiye: ad text, ad image, targeting, launch and weekly reporting.
