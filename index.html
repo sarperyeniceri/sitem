@@ -5,8 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ChatGPT Ads for UK Trades | Veri Creative Lab</title>
 <meta name="description" content="People ask ChatGPT who to call. Your ad can appear right under the answer. We make your ChatGPT ad, run it and show you the results.">
-<!-- TASLAK: yayına kadar arama motorlarına kapalı. Ölçüm kodu (OpenAI, Clarity) yok; İngiltere hesabı açılınca eklenecek. -->
-<script>window.vclBasvuru = function () {};</script>
+<!-- OpenAI Pixel (Equation London Ltd reklam hesabı, 2 Kas). Form gönderilince lead_created ölçülür. Çerez çubuğu yok (Sarper, 2 Kas: riski bilerek). -->
+<script>
+(function (w, d, s, u) {
+  if (w.oaiq) return;
+  var q = function () { q.q.push(arguments); };
+  q.q = [];
+  w.oaiq = q;
+  var js = d.createElement(s);
+  js.async = true;
+  js.src = u;
+  var f = d.getElementsByTagName(s)[0];
+  f.parentNode.insertBefore(js, f);
+})(window, document, "script", "https://bzrcdn.openai.com/sdk/oaiq.min.js");
+oaiq("consent", true);
+oaiq("init", { pixelId: "3vWj1MBJkqfTDxREA5ifkr" });
+window.vclBasvuru = function () {
+  try {
+    if (sessionStorage.getItem("vcl_basvuru")) return;
+    sessionStorage.setItem("vcl_basvuru", "1");
+  } catch (e) {}
+  oaiq("measure", "lead_created", { type: "customer_action" });
+};
+</script>
 <link rel="canonical" href="https://www.vericreativelab.co/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_GB">
