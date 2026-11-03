@@ -20,6 +20,9 @@
 })(window, document, "script", "https://bzrcdn.openai.com/sdk/oaiq.min.js");
 oaiq("consent", true);
 oaiq("init", { pixelId: "3vWj1MBJkqfTDxREA5ifkr" });
+// Microsoft Clarity (eski sitedeki proje, 3 Kas): ziyaretçi kaydı ve ısı haritası
+(function (c, l, a, r, i, t, y) { c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); }; t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i; y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y); })(window, document, "clarity", "script", "yszbdy2ctv");
+clarity("consentv2", { ad_Storage: "denied", analytics_Storage: "granted" });
 window.vclBasvuru = function () {
   try {
     if (sessionStorage.getItem("vcl_basvuru")) return;
